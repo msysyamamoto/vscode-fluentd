@@ -7,6 +7,9 @@
 		},
 		{
 			"include": "#reserved_parameter"
+		},
+		{
+			"include": "#comment"
 		}
 	],
 	"repository": {
@@ -45,12 +48,21 @@
 				},
 				{
 					"include": "#reserved_parameter"
+				},
+				{
+					"include": "#comment"
 				}
 			]
 		},
 		"reserved_parameter": {
 			"match": "@(type|id|label|log_level)",
 			"name": "variable.language.fluentd",
+			"patterns": [
+			]
+		},
+		"comment": {
+			"match": "(#\\p{Print}*$)",
+			"name": "comment.line.number-sign.fluentd",
 			"patterns": [
 			]
 		}
