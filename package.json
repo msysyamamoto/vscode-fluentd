@@ -19,7 +19,7 @@
         }],
         "grammars": [{
             "language": "fluentd",
-            "scopeName": "",
+            "scopeName": "source.dig",
             "path": "./syntaxes/fluentd.tmLanguage.json"
         }]
     }

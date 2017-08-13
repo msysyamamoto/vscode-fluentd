@@ -3,30 +3,45 @@
 	"name": "fluentd",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
+			"include": "#directive"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.fluentd",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.fluentd",
-			"begin": "\"",
-			"end": "\"",
+		"directive": {
+			"begin": "(<)(\\w+)\\s*([^>\\s]+)?\\s*(>)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.fluentd"
+				},
+				"2": {
+					"name": "entity.name.tag.fluentd"
+				},
+				"3": {
+					"name": "entity.other.attribute-name.fluentd"
+				},
+				"4": {
+					"name": "punctuation.definition.tag.fluentd"
+				}
+			},
+			"end": "(</)(\\2)(>)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.fluentd"
+				},
+				"2": {
+					"name": "entity.name.tag.fluentd"
+				},
+				"3": {
+					"name": "punctuation.definition.tag.fluentd"
+				}
+			},
+			"name": "punctuation.definition.tag.fluentd",
 			"patterns": [
 				{
-					"name": "constant.character.escape.fluentd",
-					"match": "\\\\."
+					"include": "#directive"
 				}
 			]
 		}
 	},
-	"scopeName": ""
+	"scopeName": "source.dig"
 }
