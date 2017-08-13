@@ -4,6 +4,9 @@
 	"patterns": [
 		{
 			"include": "#directive"
+		},
+		{
+			"include": "#reserved_parameter"
 		}
 	],
 	"repository": {
@@ -39,7 +42,16 @@
 			"patterns": [
 				{
 					"include": "#directive"
+				},
+				{
+					"include": "#reserved_parameter"
 				}
+			]
+		},
+		"reserved_parameter": {
+			"match": "@(type|id|label|log_level)",
+			"name": "variable.language.fluentd",
+			"patterns": [
 			]
 		}
 	},
