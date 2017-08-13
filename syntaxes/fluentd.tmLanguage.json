@@ -1,6 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "fluentd",
+	"uuid": "A8BAF219-7F2B-4B7D-99AA-01C426A93C31",
 	"patterns": [
 		{
 			"include": "#directive"
