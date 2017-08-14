@@ -58,6 +58,9 @@
 				},
 				{
 					"include": "#single_quoted_strings"
+				},
+				{
+					"include": "#number"
 				}
 			]
 		},
@@ -118,6 +121,11 @@
 			"patterns": [],
 			"match": "\\\\(?:[0-7]{1,3}|x[\\da-fA-F]{1,2}|.)",
 			"name": "constant.character.escape.fluentd"
+		},
+		"number": {
+			"patterns": [],
+			"match": "\\b\\d+\\b",
+			"name": "constant.numeric.fluentd"
 		}
 	},
 	"scopeName": "source.dig"
