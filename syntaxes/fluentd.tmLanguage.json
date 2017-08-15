@@ -64,6 +64,9 @@
 				},
 				{
 					"include": "#boolean"
+				},
+				{
+					"include": "#placeholders"
 				}
 			]
 		},
@@ -134,6 +137,26 @@
 			"patterns": [],
 			"match": "\\b(?:true|false)\\b",
 			"name": "constant.language.fluentd"
+		},
+		"placeholders": {
+			"begin": "\\${",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.variable.fluentd"
+				}
+			},
+			"end": "}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.variable.fluentd"
+				}
+			},
+			"patterns": [
+				{
+					"match": "[\\w.]+",
+					"name": "variable.parameter.fluentd"
+				}
+			]
 		}
 	},
 	"scopeName": "source.dig"
