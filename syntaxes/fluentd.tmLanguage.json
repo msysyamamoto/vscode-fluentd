@@ -61,6 +61,9 @@
 				},
 				{
 					"include": "#number"
+				},
+				{
+					"include": "#boolean"
 				}
 			]
 		},
@@ -126,6 +129,11 @@
 			"patterns": [],
 			"match": "\\b\\d+\\b",
 			"name": "constant.numeric.fluentd"
+		},
+		"boolean": {
+			"patterns": [],
+			"match": "\\b(?:true|false)\\b",
+			"name": "constant.language.fluentd"
 		}
 	},
 	"scopeName": "source.dig"
