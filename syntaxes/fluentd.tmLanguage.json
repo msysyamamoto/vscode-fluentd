@@ -66,7 +66,7 @@
 					"include": "#boolean"
 				},
 				{
-					"include": "#placeholders"
+					"include": "#braced_placeholder"
 				}
 			]
 		},
@@ -138,7 +138,7 @@
 			"match": "\\b(?:true|false)\\b",
 			"name": "constant.language.fluentd"
 		},
-		"placeholders": {
+		"braced_placeholder": {
 			"begin": "\\${",
 			"beginCaptures": {
 				"0": {
