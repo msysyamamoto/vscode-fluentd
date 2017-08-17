@@ -67,6 +67,9 @@
 				},
 				{
 					"include": "#braced_placeholder"
+				},
+				{
+					"include": "#underscored_placeholder"
 				}
 			]
 		},
@@ -154,6 +157,26 @@
 			"patterns": [
 				{
 					"match": "(?<=\\${)(?:tag_parts\\[\\d+]|tag|hostname)(?=})",
+					"name": "variable.parameter.fluentd"
+				}
+			]
+		},
+		"underscored_placeholder": {
+			"begin": "__",
+			"beginCaptures": {
+				"0": {
+					"name": "variable.parameter.fluentd"
+				}
+			},
+			"end": "__",
+			"endCaptures": {
+				"0": {
+					"name": "variable.parameter.fluentd"
+				}
+			},
+			"patterns": [
+				{
+					"match": "(?<=__)(?:TAG_PARTS\\[\\d+]|TAG|HOSTNAME)(?=__)",
 					"name": "variable.parameter.fluentd"
 				}
 			]
