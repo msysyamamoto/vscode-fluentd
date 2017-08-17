@@ -102,6 +102,9 @@
 			"patterns": [
 				{
 					"include": "#escaped_char"
+				},
+				{
+					"include": "#ruby"
 				}
 			]
 		},
@@ -180,7 +183,24 @@
 					"name": "variable.parameter.fluentd"
 				}
 			]
-		}
+		},
+		"ruby": {
+			"begin": "#{",
+			"beginCaptures": {
+			  "0": {
+				"name": "punctuation.definition.variable.begin.fluentd"
+			  }
+			},
+			"end": "}",
+			"endCaptures": {
+			  "0": {
+				"name": "punctuation.definition.variable.end.fluentd"
+			  }
+			},
+			"name": "variable.parameter.fluentd",
+			"patterns": [
+			]
+	  }
 	},
 	"scopeName": "source.dig"
 }
