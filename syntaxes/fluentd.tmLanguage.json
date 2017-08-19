@@ -140,7 +140,7 @@
 		},
 		"number": {
 			"patterns": [],
-			"match": "\\b\\d+\\b",
+			"match": "-?\\b\\d+[kKmMgGtTsmhd]?\\b",
 			"name": "constant.numeric.fluentd"
 		},
 		"boolean": {
