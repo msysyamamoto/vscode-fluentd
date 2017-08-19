@@ -12,6 +12,9 @@
 		},
 		{
 			"include": "#comment"
+		},
+		{
+			"include": "#at_include"
 		}
 	],
 	"repository": {
@@ -201,7 +204,12 @@
 			"name": "variable.parameter.fluentd",
 			"patterns": [
 			]
-	  }
+		},
+		"at_include": {
+			"patterns": [],
+			"match": "@include",
+			"name": "keyword.other.fluentd"
+		} 
 	},
 	"scopeName": "source.dig"
 }
