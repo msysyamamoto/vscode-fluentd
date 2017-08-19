@@ -1,0 +1,26 @@
+{
+    "name": "vscode-fluentd",
+    "displayName": "vscode-fluentd",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "msysyamamoto",
+    "engines": {
+        "vscode": "^1.14.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "fluentd",
+            "aliases": ["fluentd", "fluentd"],
+            "extensions": [""],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "fluentd",
+            "scopeName": "source.dig",
+            "path": "./syntaxes/fluentd.tmLanguage.json"
+        }]
+    }
+}

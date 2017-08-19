@@ -1,0 +1,215 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "fluentd",
+	"uuid": "A8BAF219-7F2B-4B7D-99AA-01C426A93C31",
+	"keyEquivalent": "^~F",
+	"patterns": [
+		{
+			"include": "#directive"
+		},
+		{
+			"include": "#reserved_parameter"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#at_include"
+		}
+	],
+	"repository": {
+		"directive": {
+			"begin": "(<)(\\w+)\\s*([^>]+)?\\s*(>)",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.fluentd"
+				},
+				"2": {
+					"name": "entity.name.tag.fluentd"
+				},
+				"3": {
+					"name": "entity.other.attribute-name.fluentd"
+				},
+				"4": {
+					"name": "punctuation.definition.tag.fluentd"
+				}
+			},
+			"end": "(</)(\\2)(>)",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.definition.tag.fluentd"
+				},
+				"2": {
+					"name": "entity.name.tag.fluentd"
+				},
+				"3": {
+					"name": "punctuation.definition.tag.fluentd"
+				}
+			},
+			"name": "punctuation.definition.tag.fluentd",
+			"patterns": [
+				{
+					"include": "#directive"
+				},
+				{
+					"include": "#reserved_parameter"
+				},
+				{
+					"include": "#comment"
+				},
+				{
+					"include": "#double_quoted_strings"
+				},
+				{
+					"include": "#single_quoted_strings"
+				},
+				{
+					"include": "#number"
+				},
+				{
+					"include": "#boolean"
+				},
+				{
+					"include": "#braced_placeholder"
+				},
+				{
+					"include": "#underscored_placeholder"
+				}
+			]
+		},
+		"reserved_parameter": {
+			"match": "@(type|id|label|log_level)",
+			"name": "variable.language.fluentd",
+			"patterns": [
+			]
+		},
+		"comment": {
+			"match": "(#\\p{Print}*$)",
+			"name": "comment.line.number-sign.fluentd",
+			"patterns": [
+			]
+		},
+		"double_quoted_strings": {
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.fluentd"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.fluentd"
+				}
+			},
+			"name": "string.quoted.double.fluentd",
+			"patterns": [
+				{
+					"include": "#escaped_char"
+				},
+				{
+					"include": "#ruby"
+				}
+			]
+		},
+		"single_quoted_strings": {
+			"begin": "'",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.fluentd"
+				}
+			},
+			"end": "'",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.fluentd"
+				}
+			},
+			"name": "string.quoted.single.fluentd",
+			"patterns": [
+				{
+					"match": "\\\\'|\\\\\\\\",
+					"name": "constant.character.escape.fluentd"
+				}
+			]
+		},
+		"escaped_char": {
+			"patterns": [],
+			"match": "\\\\(?:[0-7]{1,3}|x[\\da-fA-F]{1,2}|.)",
+			"name": "constant.character.escape.fluentd"
+		},
+		"number": {
+			"patterns": [],
+			"match": "-?\\b\\d+[kKmMgGtTsmhd]?\\b",
+			"name": "constant.numeric.fluentd"
+		},
+		"boolean": {
+			"patterns": [],
+			"match": "\\b(?:true|false)\\b",
+			"name": "constant.language.fluentd"
+		},
+		"braced_placeholder": {
+			"begin": "\\${",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.variable.fluentd"
+				}
+			},
+			"end": "}",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.variable.fluentd"
+				}
+			},
+			"patterns": [
+				{
+					"match": "(?<=\\${)(?:tag_parts\\[\\d+]|tag|hostname)(?=})",
+					"name": "variable.parameter.fluentd"
+				}
+			]
+		},
+		"underscored_placeholder": {
+			"begin": "__",
+			"beginCaptures": {
+				"0": {
+					"name": "variable.parameter.fluentd"
+				}
+			},
+			"end": "__",
+			"endCaptures": {
+				"0": {
+					"name": "variable.parameter.fluentd"
+				}
+			},
+			"patterns": [
+				{
+					"match": "(?<=__)(?:TAG_PARTS\\[\\d+]|TAG|HOSTNAME)(?=__)",
+					"name": "variable.parameter.fluentd"
+				}
+			]
+		},
+		"ruby": {
+			"begin": "#{",
+			"beginCaptures": {
+			  "0": {
+				"name": "punctuation.definition.variable.begin.fluentd"
+			  }
+			},
+			"end": "}",
+			"endCaptures": {
+			  "0": {
+				"name": "punctuation.definition.variable.end.fluentd"
+			  }
+			},
+			"name": "variable.parameter.fluentd",
+			"patterns": [
+			]
+		},
+		"at_include": {
+			"patterns": [],
+			"match": "@include",
+			"name": "keyword.other.fluentd"
+		} 
+	},
+	"scopeName": "source.dig"
+}
