@@ -1,9 +1,16 @@
 {
     "name": "vscode-fluentd",
     "displayName": "vscode-fluentd",
-    "description": "",
+    "description": "Fluentd configuration file support for Visual Studio Code",
     "version": "0.0.1",
     "publisher": "msysyamamoto",
+    "icon": "https://raw.githubusercontent.com/msysyamamoto/vscode-fluentd/master/images/Fluentd_icon.png",
+    "license": "SEE LICENSE IN LICENSE",
+    "homepage": "https://raw.githubusercontent.com/msysyamamoto/vscode-fluentd/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/msysyamamoto/vscode-fluentd"
+    },
     "engines": {
         "vscode": "^1.14.0"
     },
