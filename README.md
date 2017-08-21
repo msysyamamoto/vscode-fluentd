@@ -12,5 +12,4 @@ This extension adds language support for the fluentd configuration file to Visua
 ## Release Notes
 
 ### 0.0.1 [Unreleased]
-
-Initial release of
+* Initial release
