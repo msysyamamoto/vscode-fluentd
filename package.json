@@ -21,9 +21,20 @@
         "languages": [{
             "id": "fluentd",
             "aliases": ["fluentd", "fluentd"],
-            "extensions": [""],
+            "extensions": ["${config:fluentd.extensions}"],
             "configuration": "./language-configuration.json"
         }],
+        "configuration": {
+			"type": "object",
+			"title": "Fluentd Configuration",
+			"properties": {
+				"fluentd.extensions": {
+					"type": "string",
+					"default": ".conf",
+					"description": "Fluentd extensions. Default is `.conf`"
+				}
+            }
+        },
         "grammars": [{
             "language": "fluentd",
             "scopeName": "source.dig",
