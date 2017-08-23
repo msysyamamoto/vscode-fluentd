@@ -11,6 +11,9 @@
         "type": "git",
         "url": "https://github.com/msysyamamoto/vscode-fluentd"
     },
+    "keywords": [
+        "fluentd"
+    ],
     "engines": {
         "vscode": "^1.14.0"
     },
@@ -21,20 +24,9 @@
         "languages": [{
             "id": "fluentd",
             "aliases": ["fluentd", "fluentd"],
-            "extensions": ["${config:fluentd.extensions}"],
+            "extensions": [".conf"],
             "configuration": "./language-configuration.json"
         }],
-        "configuration": {
-			"type": "object",
-			"title": "Fluentd Configuration",
-			"properties": {
-				"fluentd.extensions": {
-					"type": "string",
-					"default": ".conf",
-					"description": "Fluentd extensions. Default is `.conf`"
-				}
-            }
-        },
         "grammars": [{
             "language": "fluentd",
             "scopeName": "source.dig",
