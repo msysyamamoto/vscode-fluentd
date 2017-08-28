@@ -2,7 +2,7 @@
     "name": "vscode-fluentd",
     "displayName": "vscode-fluentd",
     "description": "Fluentd configuration file support for Visual Studio Code",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "msysyamamoto",
     "icon": "images/Fluentd_icon.png",
     "license": "SEE LICENSE IN LICENSE",
@@ -21,16 +21,25 @@
         "Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "fluentd",
-            "aliases": ["fluentd", "fluentd"],
-            "extensions": [".conf"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "fluentd",
-            "scopeName": "source.fluentd",
-            "path": "./syntaxes/fluentd.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "fluentd",
+                "aliases": [
+                    "fluentd",
+                    "fluentd"
+                ],
+                "extensions": [
+                    ".conf"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "fluentd",
+                "scopeName": "source.fluentd",
+                "path": "./syntaxes/fluentd.tmLanguage.json"
+            }
+        ]
     }
 }
