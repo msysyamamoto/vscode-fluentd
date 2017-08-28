@@ -11,5 +11,8 @@ This extension adds language support for the fluentd configuration file to Visua
 
 ## Release Notes
 
+### 0.0.2
+* Fix scopeName in package.json
+
 ### 0.0.1
 * Initial release
