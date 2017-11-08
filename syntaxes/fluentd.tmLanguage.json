@@ -213,5 +213,5 @@
 			"name": "keyword.other.fluentd"
 		} 
 	},
-	"scopeName": "source.dig"
+	"scopeName": "source.fluentd"
 }
