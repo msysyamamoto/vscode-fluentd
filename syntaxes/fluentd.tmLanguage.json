@@ -60,12 +60,6 @@
 					"include": "#comment"
 				},
 				{
-					"include": "#double_quoted_strings"
-				},
-				{
-					"include": "#single_quoted_strings"
-				},
-				{
 					"include": "#number"
 				},
 				{
@@ -89,50 +83,6 @@
 			"match": "(#\\p{Print}*$)",
 			"name": "comment.line.number-sign.fluentd",
 			"patterns": [
-			]
-		},
-		"double_quoted_strings": {
-			"begin": "\"",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.fluentd"
-				}
-			},
-			"end": "\"",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.fluentd"
-				}
-			},
-			"name": "string.quoted.double.fluentd",
-			"patterns": [
-				{
-					"include": "#escaped_char"
-				},
-				{
-					"include": "#ruby"
-				}
-			]
-		},
-		"single_quoted_strings": {
-			"begin": "'",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.fluentd"
-				}
-			},
-			"end": "'",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.fluentd"
-				}
-			},
-			"name": "string.quoted.single.fluentd",
-			"patterns": [
-				{
-					"match": "\\\\'|\\\\\\\\",
-					"name": "constant.character.escape.fluentd"
-				}
 			]
 		},
 		"escaped_char": {
