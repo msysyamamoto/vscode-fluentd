@@ -3,8 +3,6 @@
 	"name": "fluentd",
 	"uuid": "A8BAF219-7F2B-4B7D-99AA-01C426A93C31",
 	"keyEquivalent": "^~F",
-	"foldingStartMarker": "(<)(\\w+)\\s*([^>]+)?\\s*(>)",
-	"foldingStopMarker": "(</)(\\2)(>)",
 	"patterns": [
 		{
 			"include": "#directive"
