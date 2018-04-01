@@ -2,7 +2,7 @@
     "name": "vscode-fluentd",
     "displayName": "vscode-fluentd",
     "description": "Fluentd configuration file support for Visual Studio Code",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "msysyamamoto",
     "icon": "images/Fluentd_icon.png",
     "license": "SEE LICENSE IN LICENSE",
