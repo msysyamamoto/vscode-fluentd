@@ -9,6 +9,9 @@ This extension adds language support for the fluentd configuration file to Visua
 ![screenshot](./images/screenshot.png)
 
 ## Release Notes
+## 0.0.4
+- Unsupport string ([#3](https://github.com/msysyamamoto/vscode-fluentd/issues/3))
+
 ## 0.0.3
 - Fixed scopeName ([#1](https://github.com/msysyamamoto/vscode-fluentd/issues/1))
 

@@ -3,6 +3,10 @@ All notable changes to the "vscode-fluentd" extension will be documented in this
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.0.4]
+### Fixed
+- Unsupport string ([#3](https://github.com/msysyamamoto/vscode-fluentd/issues/3))
+
 ## [0.0.3]
 ### Fixed
 - Fixed scopeName ([#1](https://github.com/msysyamamoto/vscode-fluentd/issues/1))
