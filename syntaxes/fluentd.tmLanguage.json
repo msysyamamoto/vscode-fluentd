@@ -3,8 +3,6 @@
 	"name": "fluentd",
 	"uuid": "A8BAF219-7F2B-4B7D-99AA-01C426A93C31",
 	"keyEquivalent": "^~F",
-	"foldingStartMarker": "(<)(\\w+)\\s*([^>]+)?\\s*(>)",
-	"foldingStopMarker": "(</)(\\2)(>)",
 	"patterns": [
 		{
 			"include": "#directive"
@@ -21,7 +19,7 @@
 	],
 	"repository": {
 		"directive": {
-			"begin": "(<)(\\w+)\\s*([^>]+)?\\s*(>)",
+			"begin": "(<)(\\w+)\\s*([^>]+)?\\s*(>)(?=\\s*\\n)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.tag.fluentd"
@@ -60,12 +58,6 @@
 					"include": "#comment"
 				},
 				{
-					"include": "#double_quoted_strings"
-				},
-				{
-					"include": "#single_quoted_strings"
-				},
-				{
 					"include": "#number"
 				},
 				{
@@ -89,50 +81,6 @@
 			"match": "(#\\p{Print}*$)",
 			"name": "comment.line.number-sign.fluentd",
 			"patterns": [
-			]
-		},
-		"double_quoted_strings": {
-			"begin": "\"",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.fluentd"
-				}
-			},
-			"end": "\"",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.fluentd"
-				}
-			},
-			"name": "string.quoted.double.fluentd",
-			"patterns": [
-				{
-					"include": "#escaped_char"
-				},
-				{
-					"include": "#ruby"
-				}
-			]
-		},
-		"single_quoted_strings": {
-			"begin": "'",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.fluentd"
-				}
-			},
-			"end": "'",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.fluentd"
-				}
-			},
-			"name": "string.quoted.single.fluentd",
-			"patterns": [
-				{
-					"match": "\\\\'|\\\\\\\\",
-					"name": "constant.character.escape.fluentd"
-				}
 			]
 		},
 		"escaped_char": {
