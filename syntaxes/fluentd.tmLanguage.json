@@ -21,7 +21,7 @@
 	],
 	"repository": {
 		"directive": {
-			"begin": "(<)(\\w+)\\s*([^>]+)?\\s*(>)",
+			"begin": "(<)(\\w+)\\s*([^>]+)?\\s*(>)(?=\\s*\\n)",
 			"beginCaptures": {
 				"1": {
 					"name": "punctuation.definition.tag.fluentd"
